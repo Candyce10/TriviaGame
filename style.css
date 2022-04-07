@@ -1,0 +1,77 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 4rem ;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+body{
+    background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w;");
+    background-position: center ;
+    position: relative;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+
+}
+
+h2{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    height: 75vh;
+    align-items: center;
+    max-width: 70rem;
+    margin: 0.1rem auto;
+    padding: 0.2rem;
+    background-color: grey;
+    border-radius: 10%;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.hidden{
+    display:none;
+}
+.button{
+    font-size: 3.2rem;
+    padding: 1.6rem;
+    width: 30rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color:blueviolet;
+    background: white;
+    box-shadow: 0 0.7rem teal;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {background-color: teal}
+
+.button:active {
+  background-color: teal;
+  box-shadow: 0 0.7rem #666;
+  transform: translateY(4px);
+}
+
