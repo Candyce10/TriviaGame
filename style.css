@@ -1,8 +1,6 @@
-
-
 * {
     box-sizing: border-box;
-    margin: 4rem ;
+    margin: 0 auto ;
     padding: 0;
     font-size: 62.5%;
 }
@@ -14,17 +12,20 @@ body{
     
 }
 h1{
-    color: white;
+    color: teal;
     text-align: center;
     font-size: 5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
 
 }
 
 h2{
-    font-size: 4rem;
-    margin-bottom: 1.2rem;
+    
+    font-size: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
+    padding: 1rem;
 }
 
 .flex-container{
@@ -34,11 +35,11 @@ h2{
     height: 75vh;
     align-items: center;
     max-width: 70rem;
-    margin: 0.1rem auto;
-    padding: 0.2rem;
-    background-color: grey;
-    border-radius: 10%;
-}
+    margin:  0 auto;
+    padding: 1rem;
+    background-color: #f8f8ff;
+    border-radius: 15%;
+} 
 
 .flex-column{
     display: flex;
@@ -48,6 +49,8 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
+
 .text-center{
     text-align: center;
 }
@@ -55,23 +58,33 @@ h2{
     display:none;
 }
 .button{
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     padding: 1.6rem;
+    margin: 0.4rem;
     width: 30rem;
     border-radius: 15px;
     text-align: center;
     text-decoration: none;
     color:blueviolet;
     background: white;
-    box-shadow: 0 0.7rem teal;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
-.button:hover {background-color: teal}
+.button:hover {
+    background-color: teal;
+    box-shadow:  0 0.4rem 1.4rem 0 black;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
 
 .button:active {
   background-color: teal;
-  box-shadow: 0 0.7rem #666;
+  box-shadow: 0 0.5rem #666;
   transform: translateY(4px);
 }
 
+.button[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}

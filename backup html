@@ -1,0 +1,39 @@
+<div class="container"> 
+        <div id="trivia" class="justify-center flex-column">    
+            <div id="display">
+                <div class="display-item">
+                    <p id="progressText" class="display-prefix">
+                        Question
+                    </p>
+                    <div id="progress-bar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="display-item">
+                    <p class="display-prefix">
+                        Score
+                    </p>
+                    <h1 class="display-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <div id="question">Question 1</div>
+            <div class="answer-container">
+                <p class="answer-prefix">A</p>
+                <p class="answer-text" data-number="1">Answer 1</p>
+            </div>
+            <div class="answer-container">
+                <p class="answer-prefix">B</p>
+                <p class="answer-text" data-number="2">Answer 2</p>
+            </div>
+            <div class="answer-container">
+                <p class="answer-prefix">C</p>
+                <p class="answer-text" data-number="3">Answer 3</p>
+            </div>
+            <div class="answer-container">
+                <p class="answer-prefix">D</p>
+                <p class="answer-text" data-number="4">Answer 4</p>
+            </div>
+        </div>
+    </div>
