@@ -1,90 +1,116 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 * {
     box-sizing: border-box;
-    margin: 0 auto ;
+    margin: 0;
     padding: 0;
-    font-size: 62.5%;
+    
 }
 
 body{
     background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
-    background-position: center ;
-    position: relative;
+    background-repeat: none;
+    color: rgb(69, 66, 66)
+
     
 }
 h1{
     color: teal;
     text-align: center;
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    padding: 1rem;
-
+    font-size: 2.5rem;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
 }
-
 h2{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 15px;
+}
+ .startButton, .startPage{ /*start button div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+.startPage{
+    display: none;
+    width: 29.1rem;
+    height: 21.3rem;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
+
+
+.startPage .startText{
+    height: 9rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid lightslategray;
+}
+
+.gameButtons{
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
     
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    padding: 1rem;
 }
 
-.flex-container{
-    display: flex;
-    justify-content: center;
-    width: 70vw;
-    height: 75vh;
-    align-items: center;
-    max-width: 70rem;
-    margin:  0 auto;
-    padding: 1rem;
-    background-color: #f8f8ff;
-    border-radius: 15%;
-} 
+.startButton a{
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-.flex-center{
-    align-items: center;
-    justify-content: center;
-}
-
-
-.text-center{
-    text-align: center;
-}
-.hidden{
-    display:none;
-}
-.button{
-    font-size: 2.2rem;
-    padding: 1.6rem;
-    margin: 0.4rem;
-    width: 30rem;
-    border-radius: 15px;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
     text-decoration: none;
-    color:blueviolet;
-    background: white;
-    transition: all 0.1s ease-in-out;
+    padding: 1.3rem;
+    width: 70px;
+    border-radius: 7px;
+    background-color: teal;
+ }
+
+ .startButton:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow:  0 0.4rem 1.4rem 0 black;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    
 }
 
-.button:hover {
-    background-color: teal;
+.startButton:active {
+    box-shadow: 0 0.1rem rgb(28, 1, 1);
+    transform: translateY(4px);
+}
+
+
+.startPage .gameButtons{
+    text-decoration: none;
+    background: teal;
+    color: aliceblue;
+    display:flex;
+    justify-content: center;
+    margin: 0px 12px 12px;
+    width: 30%;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+ .gameButtons:hover {
+    cursor: pointer;
+    transform: scale(1.02);
     box-shadow:  0 0.4rem 1.4rem 0 black;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
-.button:active {
-  background-color: teal;
-  box-shadow: 0 0.5rem #666;
-  transform: translateY(4px);
-}
-
-.button[disabled]:hover{
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
+.gameButtons:active {
+    box-shadow: 0 0.1rem rgb(68, 67, 67);
+    transform: translateY(4px);
+  }
