@@ -62,7 +62,6 @@ h2{
 .startButton a{
 
     font-size: 1.5rem;
-    font-weight: 400;
     color: white;
     text-decoration: none;
     padding: 1.3rem;
@@ -71,18 +70,18 @@ h2{
     background-color: teal;
  }
 
- .startButton:hover {
+ #start:hover {
     cursor: pointer;
-    transform: scale(1.02);
-    box-shadow:  0 0.4rem 1.4rem 0 black;
-    transform: translateY(-0.1rem);
+    transform: scale(-0.5);
+    box-shadow:  0 0.9rem 2rem 0 black;
+    transform: translateY(-0.2rem);
     transition: transform 150ms;
     
 }
 
-.startButton:active {
+#start:active {
     box-shadow: 0 0.1rem rgb(28, 1, 1);
-    transform: translateY(4px);
+    transform: translateY(-.02px);
 }
 
 
