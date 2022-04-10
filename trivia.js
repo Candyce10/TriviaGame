@@ -1,11 +1,15 @@
 const question = document.querySelector('.question')
-const answer = document.querySelector('.answerText')
+const answers = Array.from(document.querySelectorAll('.answerText'))//turn answerTexts into array to pull form when inserting in function
+const scoreText = document.querySelector('#score')
+const questionNumber = document.querySelector('#questionNumber')
+const scorePoints = 100
+console.log(answers);
 
-
-let currentQuestion = {}
-let acceptingAnswers = true
+let currentQuestion = {} // set equal to empty object
+let acceptingAnswers = true 
 let score = 0
-let availableQuestions = []
+let nextQuestion = []
+let questionLog = 0
 
 let allQuestions = [
     {question: "What was the bestselling video game console of the 1990's?",
@@ -45,9 +49,28 @@ let allQuestions = [
 }
 ]
 
+function startGame(){//set function to start game when button is clicked
+    questionLog = 0; //question number starts at 0
+    score = 0;
+    nextQuestion =[...allQuestions];//use spread operator to copy in questions from allQuestions object and put into new array
+    console.log(nextQuestion);
+    addQuestion(); // this function will add questions to game when game is started
+};
 
+function addQuestion(){// this function will insert question into question box 
+    questionLog ++;//increments questions when game is started 
+    const questionIndex = Math.floor(Math.random() * nextQuestion.length); // selects index randomly out of question array; set equal to variable
+    currentQuestion = nextQuestion[questionIndex];// set current question equal to the index of the random generated index from question index variable
+    question.innerHTML = currentQuestion.question; // insert the text of the question object key into the question paragraph
 
-function addQuestion(){
-    question.innerHTML = allQuestions[0].question
-}
-console.log(addQuestion());
+    answers.forEach(function(answer){//insert answer into answer boxes: use for each to iterate over every element in answers array
+        const number = answer.dataset["number"]// for each parameter in array , access to dataset number assigned to it
+        answer.innerText = currentQuestion["answer" + number]//set paragraph text equal to each answer using dataset number 
+        console.log(answer);
+    });
+};
+
+startGame();
+//     question.innerHTML = allQuestions[0].question
+// }
+// console.log(addQuestion());
