@@ -1,17 +1,13 @@
-const questionText = document.querySelector('.questionText') // this will create my question variable so I can insert the question
-const answers = Array.from(document.querySelector('.answerText')) // answer variable to insert answer,
-const scoreText = document.querySelector('.scoreBoard')// where my score text will go
-const scorePoints = 100
-const startButton = document.querySelector("#start")
-
-let currentQuestion = {} //
-let takeAnswer = true // creates delay before they can answer again
-let score = 0 
-let numQuestion = 0 // what question are you on
-let availableQuestions = [] // take questions out of array as we use them so questions are always unique
+const question = document.querySelector('.question')
+const answer = document.querySelector('.answerText')
 
 
-let questions = [
+let currentQuestion = {}
+let acceptingAnswers = true
+let score = 0
+let availableQuestions = []
+
+let allQuestions = [
     {question: "What was the bestselling video game console of the 1990's?",
     answer1: "Game Boy Color",
     answer2: "Nintendo64",
@@ -30,7 +26,7 @@ let questions = [
     answer1: "E-mail",
     answer2: "Pagers",
     answer3: "Talk Over The Phone",
-    answer4: "Hand-written Mail",
+    answer4: "Hand-Written Mail",
     correct: 2
 },
     {question: "When was the World Wide Web first introduced?",
@@ -49,21 +45,9 @@ let questions = [
 }
 ]
 
-const addedPoints = 100
-const maxQuestions = 5
 
 
-
-
-function startGame(){
-    numQuestion = 0;
-    scoreText.innerHTML = questions.length * 100;
-    questionText.innerHTML = questions[numQuestion].question;
-
+function addQuestion(){
+    question.innerHTML = allQuestions[0].question
 }
-
-
-
-function addNextQuestion(){}
-
-function selectAnswer(){}
+console.log(addQuestion());

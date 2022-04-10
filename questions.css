@@ -22,22 +22,13 @@ p{
     transform: translate(-50%, -50%);
 
 }
-    /* display: flex;
-    justify-content: center;
-    width: 40vw;
-    height: 55vh;
-    align-items: center;
-    max-width: 60rem;
-    margin:  0 auto;
-    padding: 1rem;
-    background-color: #f8f8ff;
-    border-radius: 5%; } */
+
 
 
 .question{
     font-size: 1.7rem;
     margin-bottom: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     text-align: center;
 }
 
@@ -63,7 +54,7 @@ p{
 }
 
 .answerBox:active {
-    box-shadow: 0 0.5rem #666;
+    box-shadow: 0 0.2rem #666;
     transform: translateY(4px);
   }
   
@@ -80,4 +71,9 @@ p{
     font-size: 2.3rem;
     color: aliceblue;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
 }
