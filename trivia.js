@@ -3,7 +3,9 @@ const answers = Array.from(document.querySelectorAll('.answerText'))//turn answe
 const scoreText = document.querySelector('#score')
 const questionNumber = document.querySelector('#questionNumber')
 const scorePoints = 100
+const maxQuestions = 5
 console.log(answers);
+
 
 let currentQuestion = {} // set equal to empty object
 let acceptingAnswers = true 
@@ -58,6 +60,12 @@ function startGame(){//set function to start game when button is clicked
 };
 
 function addQuestion(){// this function will insert question into question box 
+
+if (nextQuestion.length === 0 || questionLog>= maxQuestions){
+
+    return window.location.assign("/finalpage.html");// opens new window when quiz is over
+}
+
     questionLog ++;//increments questions when game is started 
     const questionIndex = Math.floor(Math.random() * nextQuestion.length); // selects index randomly out of question array; set equal to variable
     currentQuestion = nextQuestion[questionIndex];// set current question equal to the index of the random generated index from question index variable
@@ -68,9 +76,21 @@ function addQuestion(){// this function will insert question into question box
         answer.innerText = currentQuestion["answer" + number]//set paragraph text equal to each answer using dataset number 
         console.log(answer);
     });
-};
 
+    nextQuestion.splice(questionIndex, 1); // removes question from question index so that it doesn't repeat in quiz
+    
+    acceptingAnswers = true;
+    };
+
+    answers.forEach(function(answer){//when clicked will give next question
+        answer.addEventListener('click', function(e){
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+        console.log(selectedAnswer);
+        addQuestion();
+    });
+}); 
 startGame();
-//     question.innerHTML = allQuestions[0].question
-// }
-// console.log(addQuestion());
