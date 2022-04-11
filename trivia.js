@@ -78,18 +78,24 @@ if (nextQuestion.length === 0 || questionLog>= maxQuestions){
     });
 
     nextQuestion.splice(questionIndex, 1); // removes question from question index so that it doesn't repeat in quiz
-    
+    console.log(nextQuestion);
     acceptingAnswers = true;
     };
 
     answers.forEach(function(answer){//when clicked will give next question
         answer.addEventListener('click', function(e){
-        if(!acceptingAnswers) return;
-
+        if(!acceptingAnswers) return ; // ! is the not operator
         acceptingAnswers = false;
+
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer);
+
+        let setAs = 'incorrect';
+        if(selectedAnswer == currentQuestion.correct){
+            setAs = 'correct';
+        }
+        console.log(setAs);
+        
         addQuestion();
     });
 }); 
