@@ -3,10 +3,16 @@ const answers = Array.from(document.querySelectorAll('.answerText'))//turn answe
 const scoreText = document.querySelector('#score')
 const questionNumber = document.querySelector('#questionNumber')
 const scorePoints = 100
+const negScorePoints = 50
 const maxQuestions = 5
+const questionLogInput = document.querySelector('#questionNum')
+const scoreInput = document.querySelector('#score')
+
+
+
 console.log(answers);
 
-let questionIndex
+
 let currentQuestion = {} // set equal to empty object
 let acceptingAnswers = true 
 let score = 0
@@ -67,7 +73,9 @@ if (nextQuestion.length === 0 || questionLog>= maxQuestions){
 }
 
     questionLog ++;//increments questions when game is started 
-    questionIndex = Math.floor(Math.random() * nextQuestion.length); // selects index randomly out of question array; set equal to variable
+    questionLogInput.innerHTML = questionLog + "/" + maxQuestions; // increments the question log so will count questions as game is played
+
+    const questionIndex = Math.floor(Math.random() * nextQuestion.length); // selects index randomly out of question array; set equal to variable
     currentQuestion = nextQuestion[questionIndex];// set current question equal to the index of the random generated index from question index variable
     question.innerHTML = currentQuestion.question; // insert the text of the question object key into the question paragraph
 
@@ -86,9 +94,9 @@ if (nextQuestion.length === 0 || questionLog>= maxQuestions){
 
 
 
-answers.forEach(function(answer){//when clicked will give next question
-        
-    answer.addEventListener('click', function(e){
+answers.forEach(function(answer){//when clicked this will all happen using the forEach iteration
+     
+  answer.addEventListener('click', function(e){
         
     if(!acceptingAnswers) return ; // ! is the not operator
     acceptingAnswers = false;
@@ -96,21 +104,34 @@ answers.forEach(function(answer){//when clicked will give next question
     const selectedChoice = e.target
     const selectedAnswer = selectedChoice.dataset["number"];
 
+
+
     let setAs = 'incorrect'; // sets up choice click colors
     if(selectedAnswer == currentQuestion.correct){
         setAs = 'correct';
-    } else {}
-    console.log(questionIndex);
-    console.log(selectedAnswer);
-    console.log(currentQuestion);
-    console.log(currentQuestion.correct);
+    } 
+    console.log(setAs);
+
+    if (setAs == 'correct'){//calls function from below to add or subtract score
+        addScore(scorePoints);
+    } else {subScore(negScorePoints)}
     
 selectedChoice.parentElement.classList.add(setAs);// adds .incorrect and .correct as classes, then in css set class background colors so when clicked it will change accordingly
 setTimeout(addQuestion, 1000)
 
 
+
     });
 
-    
 });
+//adding subtracting score!
+function addScore(num){
+    score += num;
+    scoreText.innerHTML = score
+}
+function subScore(num){
+    score -= num;
+    scoreText.innerHTML = score
+}
+
 startGame();

@@ -69,6 +69,7 @@ h2{
     background-color: teal;
  }
 
+
  #start:hover {
     cursor: pointer;
     transform: scale(-0.5);
