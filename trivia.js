@@ -135,3 +135,29 @@ function subScore(num){
 }
 
 startGame();
+
+
+const username = document.querySelector('#usernameBox');
+const submitButton = document.querySelector('#submitButton');
+const finalScore = document.querySelector('#finalScore');
+const recentScore = document.querySelector('#recentScore');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+
+const maxHighScores = 3
+
+finalScore.innerHTML = recentScore
+
+function saveHighScore(event){
+    const score = {
+        score: recentScore,
+        name: username.value
+    }
+    highScores.push(score)
+    highScores.sort(function (a,b){
+    return b.score - a.score
+})
+highScores.splice(5)
+localStorage.setItem('highScores', JSON.stringify(highScores))
+window.location.assign()
+}

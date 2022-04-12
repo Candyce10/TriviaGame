@@ -140,7 +140,7 @@ h3{
     color: aliceblue;
     display:flex;
     justify-content: center;
-    margin: 30px 12px 12px;
+    margin: 18px 12px 12px;
     width: 30%;
 }
 
@@ -166,10 +166,21 @@ h3{
   }
 
 .submit{
-    text-align: center;
+    text-align: center; 
+    
+}
+
+#submitButton{
+    padding: 2px;
 }
 
 #submitButton:active{
     box-shadow: 0 0.1rem rgb(68, 67, 67);
     transform: translateY(4px);
+}
+
+#usernameBox{
+    font-size: 0.9rem;
+    outline: 2px;
+    padding: 2px;
 }
