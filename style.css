@@ -36,8 +36,15 @@ h2{
 h3{
     display: block;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 0px;
+    color: rgb(69, 66, 66)
+}
+h4{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0px 0px 20px 0px;
     color: rgb(69, 66, 66)
 }
 
@@ -79,7 +86,10 @@ h3{
 
 .endPage h2{
     font-size: 3rem;
-    padding: 40px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
+}
+.endPage h3{
+    font-size: 1.4rem;
 }
 
 
@@ -167,7 +177,7 @@ h3{
     color: aliceblue;
     display:flex;
     justify-content: center;
-    margin: 0px 12px 12px;
+    margin: 0px 12px px;
     width: 30%;
 }
 .highScorePage .gameButtons{
@@ -201,22 +211,3 @@ h3{
     transform: translateY(4px);
   }
 
-.submit{
-    text-align: center; 
-    padding: 20px
-}
-
-#submitButton{
-    padding: 2px;
-}
-
-#submitButton:active{
-    box-shadow: 0 0.1rem rgb(68, 67, 67);
-    transform: translateY(4px);
-}
-
-#usernameBox{
-    font-size: 0.9rem;
-    outline: 2px;
-    padding: 2px;
-}
