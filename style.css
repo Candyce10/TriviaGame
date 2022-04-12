@@ -31,6 +31,13 @@ h2{
     padding: 15px;
     color: rgb(69, 66, 66)
 }
+h3{
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 15px;
+    color: rgb(69, 66, 66)
+}
 
  .startButton, .startPage{ 
     position: absolute;
@@ -57,7 +64,9 @@ h2{
     transform: translate(-50%, -50%);
     }
 
-
+.endPage h2{
+    font-size: 3rem;
+}
 
 
 .startPage .startText{
@@ -130,9 +139,8 @@ h2{
     background: teal;
     color: aliceblue;
     display:flex;
-    align-items: ;
     justify-content: center;
-    margin: 100px 12px 12px;
+    margin: 30px 12px 12px;
     width: 30%;
 }
 
@@ -156,3 +164,7 @@ h2{
     box-shadow: 0 0.1rem rgb(68, 67, 67);
     transform: translateY(4px);
   }
+
+.submit{
+    text-align: center;
+}
