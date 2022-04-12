@@ -11,35 +11,53 @@
 body{
     background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
     background-repeat: none;
-    color: rgb(69, 66, 66)
+    
 
     
 }
 h1{
     color: teal;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 3px;
 }
 h2{
+    display: block;
     text-align: center;
     font-size: 1.3rem;
     padding: 15px;
+    color: rgb(69, 66, 66)
 }
- .startButton, .startPage{ /*start button div */
+
+ .startButton, .startPage{ 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     }
-
+ 
+    
 .startPage{
     width: 29.1rem;
     height: 21.3rem;
     background-color: aliceblue;
     border-radius: 5%;
 }
+.endPage{
+    width: 29.1rem;
+    height: 21.3rem;
+    background-color: aliceblue;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+
 
 
 .startPage .startText{
@@ -49,6 +67,19 @@ h2{
     align-items: center;
     text-align: center;
     border-bottom: 1px solid lightslategray;
+}
+.endPage .endText{
+    height: 3rem;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.endText{
+    text-align: center;
+    margin-top: 25px;
 }
 
 .gameButtons{
@@ -94,6 +125,18 @@ h2{
     margin: 0px 12px 12px;
     width: 30%;
 }
+.endPage .gameButtons{
+    text-decoration: none;
+    background: teal;
+    color: aliceblue;
+    display:flex;
+    align-items: ;
+    justify-content: center;
+    margin: 100px 12px 12px;
+    width: 30%;
+}
+
+
 .buttons{
     display: flex;
     justify-content: center;
