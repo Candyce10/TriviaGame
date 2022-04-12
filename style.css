@@ -168,3 +168,8 @@ h3{
 .submit{
     text-align: center;
 }
+
+#submitButton:active{
+    box-shadow: 0 0.1rem rgb(68, 67, 67);
+    transform: translateY(4px);
+}
