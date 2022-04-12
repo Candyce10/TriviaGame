@@ -68,7 +68,7 @@ function startGame(){//set function to start game when button is clicked
 function addQuestion(){// this function will insert question into question box 
 
 if (nextQuestion.length === 0 || questionLog>= maxQuestions){
-
+    localStorage.setItem('recentScore', score);
     return window.location.assign("/finalpage.html");// opens new window when quiz is over
 }
 
@@ -134,30 +134,7 @@ function subScore(num){
     scoreText.innerHTML = score
 }
 
+
 startGame();
 
 
-const username = document.querySelector('#usernameBox');
-const submitButton = document.querySelector('#submitButton');
-const finalScore = document.querySelector('#finalScore');
-const recentScore = document.querySelector('#recentScore');
-
-const highScores = JSON.parse(localStorage.getItem('highScores')) || []
-
-const maxHighScores = 3
-
-finalScore.innerHTML = recentScore
-
-function saveHighScore(event){
-    const score = {
-        score: recentScore,
-        name: username.value
-    }
-    highScores.push(score)
-    highScores.sort(function (a,b){
-    return b.score - a.score
-})
-highScores.splice(5)
-localStorage.setItem('highScores', JSON.stringify(highScores))
-window.location.assign()
-}

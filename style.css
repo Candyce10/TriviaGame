@@ -24,6 +24,7 @@ h1{
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 3px;
 }
+
 h2{
     display: block;
     text-align: center;
@@ -31,11 +32,12 @@ h2{
     padding: 15px;
     color: rgb(69, 66, 66)
 }
+
 h3{
     display: block;
     text-align: center;
     font-size: 1.3rem;
-    padding: 15px;
+    padding: 0px;
     color: rgb(69, 66, 66)
 }
 
@@ -64,8 +66,20 @@ h3{
     transform: translate(-50%, -50%);
     }
 
+.highScorePage{
+    width: 29.1rem;
+    height: 21.3rem;
+    background-color: aliceblue;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
 .endPage h2{
     font-size: 3rem;
+    padding: 40px 0px 0px 0px;
 }
 
 
@@ -77,6 +91,7 @@ h3{
     text-align: center;
     border-bottom: 1px solid lightslategray;
 }
+
 .endPage .endText{
     height: 3rem;
     width: 100%;
@@ -84,9 +99,21 @@ h3{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
 }
+.highScorePage .highScoreText{
+    height: 3rem;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .endText{
+    text-align: center;
+    margin-top: 25px;
+}
+.highScoreText{
     text-align: center;
     margin-top: 25px;
 }
@@ -140,6 +167,15 @@ h3{
     color: aliceblue;
     display:flex;
     justify-content: center;
+    margin: 0px 12px 12px;
+    width: 30%;
+}
+.highScorePage .gameButtons{
+    text-decoration: none;
+    background: teal;
+    color: aliceblue;
+    display:flex;
+    justify-content: center;
     margin: 18px 12px 12px;
     width: 30%;
 }
@@ -167,7 +203,7 @@ h3{
 
 .submit{
     text-align: center; 
-    
+    padding: 20px
 }
 
 #submitButton{
