@@ -5,14 +5,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body{
     background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
     background-repeat: none;
-    
-
     
 }
 h1{
@@ -146,7 +143,6 @@ h4{
     background-color: teal;
  }
 
-
  #start:hover {
     cursor: pointer;
     transform: scale(-0.5);
@@ -190,11 +186,9 @@ h4{
     width: 30%;
 }
 
-
 .buttons{
     display: flex;
     justify-content: center;
-
     
 }
 

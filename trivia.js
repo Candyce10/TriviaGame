@@ -95,7 +95,6 @@ if (nextQuestion.length === 0 || questionLog>= maxQuestions){
 
 
 answers.forEach(function(answer){//when clicked this will all happen using the forEach iteration
-     
   answer.addEventListener('click', function(e){
         
     if(!acceptingAnswers) return ; // ! is the not operator
@@ -103,8 +102,6 @@ answers.forEach(function(answer){//when clicked this will all happen using the f
 
     const selectedChoice = e.target
     const selectedAnswer = selectedChoice.dataset["number"];
-
-
 
     let setAs = 'incorrect'; // sets up choice click colors
     if(selectedAnswer == currentQuestion.correct){
