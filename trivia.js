@@ -68,7 +68,7 @@ function startGame(){//set function to start game when button is clicked
 function addQuestion(){// this function will insert question into question box 
 
 if (nextQuestion.length === 0 || questionLog>= maxQuestions){
-    localStorage.setItem('recentScore', score);
+    
     return window.location.assign("/finalpage.html");// opens new window when quiz is over
 }
 
