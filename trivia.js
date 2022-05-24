@@ -9,10 +9,6 @@ const questionLogInput = document.querySelector('#questionNum')
 const scoreInput = document.querySelector('#score')
 
 
-
-console.log(answers);
-
-
 let currentQuestion = {} // set equal to empty object
 let acceptingAnswers = true 
 let score = 0
@@ -61,14 +57,14 @@ function startGame(){//set function to start game when button is clicked
     questionLog = 0; //question number starts at 0
     score = 0;
     nextQuestion =[...allQuestions];//use spread operator to copy in questions from allQuestions object and put into new array
-    console.log(nextQuestion);
+    
     addQuestion(); // this function will add questions to game when game is started
 };
 
 function addQuestion(){// this function will insert question into question box 
 
 if (nextQuestion.length === 0 || questionLog>= maxQuestions){
-    localStorage.setItem('recentScore', score)
+    sessionStorage.setItem('recentScore', score)
     return window.location.assign("/finalpage.html");// opens new window when quiz is over
 }
 

@@ -1,4 +1,4 @@
-const recentScore = localStorage.getItem('recentScore')
+const recentScore = sessionStorage.getItem('recentScore')
 const finalScore = document.querySelector('#finalScore');
 finalScore.innerHTML = recentScore;
 
